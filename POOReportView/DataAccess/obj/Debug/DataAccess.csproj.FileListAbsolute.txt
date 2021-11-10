@@ -1,0 +1,11 @@
+C:\Users\DantesMx\source\repos\POOReportVIew\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\DantesMx\source\repos\POOReportVIew\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\DantesMx\source\repos\POOReportVIew\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+C:\Users\DantesMx\source\repos\POOReportVIew\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\DantesMx\source\repos\POOReportVIew\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\DantesMx\source\repos\POOReportVIew\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\stalk\Documents\API\POOReportVIew\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\stalk\Documents\API\POOReportVIew\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\stalk\Documents\API\POOReportVIew\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\stalk\Documents\API\POOReportVIew\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\stalk\Documents\API\POOReportVIew\DataAccess\obj\Debug\DataAccess.pdb
