@@ -21,6 +21,11 @@ namespace Presentation
         private void menu_Load(object sender, EventArgs e)
         {
             this.reportViewer1.RefreshReport();
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            button4.Visible = false;
+            button5.Visible = false;
         }
         private void getSalesReport(DateTime startDate, DateTime endDate)
         {

@@ -30,9 +30,12 @@ namespace Presentation
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource9 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.SalesReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SalesListingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.NetSalesByPeriodBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,33 +43,41 @@ namespace Presentation
             this.button7 = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.SalesReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.SalesListingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.NetSalesByPeriodBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalesReportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SalesListingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NetSalesByPeriodBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // SalesReportBindingSource
+            // 
+            this.SalesReportBindingSource.DataSource = typeof(Domain.SalesReport);
+            // 
+            // SalesListingBindingSource
+            // 
+            this.SalesListingBindingSource.DataSource = typeof(Domain.SalesListing);
+            // 
+            // NetSalesByPeriodBindingSource
+            // 
+            this.NetSalesByPeriodBindingSource.DataSource = typeof(Domain.NetSalesByPeriod);
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.SalesReportBindingSource;
-            reportDataSource2.Name = "DataSet2";
-            reportDataSource2.Value = this.SalesListingBindingSource;
-            reportDataSource3.Name = "DataSet3";
-            reportDataSource3.Value = this.NetSalesByPeriodBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource7.Name = "DataSet1";
+            reportDataSource7.Value = this.SalesReportBindingSource;
+            reportDataSource8.Name = "DataSet2";
+            reportDataSource8.Value = this.SalesListingBindingSource;
+            reportDataSource9.Name = "DataSet3";
+            reportDataSource9.Value = this.NetSalesByPeriodBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource7);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource8);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource9);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Presentation.Reports.Reporte.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(158, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -76,13 +87,12 @@ namespace Presentation
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
@@ -97,7 +107,7 @@ namespace Presentation
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 315);
+            this.label2.Location = new System.Drawing.Point(16, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 13);
             this.label2.TabIndex = 8;
@@ -106,7 +116,7 @@ namespace Presentation
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 277);
+            this.label1.Location = new System.Drawing.Point(9, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 13);
             this.label1.TabIndex = 8;
@@ -114,7 +124,7 @@ namespace Presentation
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(33, 352);
+            this.button7.Location = new System.Drawing.Point(31, 93);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 7;
@@ -125,7 +135,7 @@ namespace Presentation
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(43, 309);
+            this.dateTimePicker2.Location = new System.Drawing.Point(41, 50);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(98, 20);
             this.dateTimePicker2.TabIndex = 6;
@@ -133,23 +143,14 @@ namespace Presentation
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(43, 271);
+            this.dateTimePicker1.Location = new System.Drawing.Point(41, 12);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(98, 20);
             this.dateTimePicker1.TabIndex = 6;
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(12, 229);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(129, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Manual";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(12, 184);
+            this.button5.Location = new System.Drawing.Point(14, 304);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(129, 23);
             this.button5.TabIndex = 4;
@@ -159,7 +160,7 @@ namespace Presentation
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 141);
+            this.button4.Location = new System.Drawing.Point(14, 261);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(129, 23);
             this.button4.TabIndex = 3;
@@ -169,7 +170,7 @@ namespace Presentation
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 94);
+            this.button3.Location = new System.Drawing.Point(14, 425);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 23);
             this.button3.TabIndex = 2;
@@ -179,7 +180,7 @@ namespace Presentation
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 53);
+            this.button2.Location = new System.Drawing.Point(14, 384);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 23);
             this.button2.TabIndex = 1;
@@ -189,25 +190,13 @@ namespace Presentation
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(14, 343);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Hoy";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // SalesReportBindingSource
-            // 
-            this.SalesReportBindingSource.DataSource = typeof(Domain.SalesReport);
-            // 
-            // SalesListingBindingSource
-            // 
-            this.SalesListingBindingSource.DataSource = typeof(Domain.SalesListing);
-            // 
-            // NetSalesByPeriodBindingSource
-            // 
-            this.NetSalesByPeriodBindingSource.DataSource = typeof(Domain.NetSalesByPeriod);
             // 
             // menu
             // 
@@ -219,11 +208,11 @@ namespace Presentation
             this.Name = "menu";
             this.Text = "menu";
             this.Load += new System.EventHandler(this.menu_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalesReportBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SalesListingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NetSalesByPeriodBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -241,7 +230,6 @@ namespace Presentation
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
